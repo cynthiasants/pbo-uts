@@ -7,7 +7,7 @@ package games;
 
 /**
  *
- * @author Cynthia
+ * @author Rizky
  */
 public class GameMenu extends TheGame { //inheritance
     public void play(){ //overriding TheGame.play method
