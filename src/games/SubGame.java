@@ -44,6 +44,11 @@ public class SubGame extends TheGame{
                int ulevel = getLevel();
                int num1 = generateSoal(ulevel);
                int num2 = generateSoal(ulevel);
+               if (ulevel == 1){
+                   while (num1 < num2){
+                       num2 = generateSoal(ulevel);
+                   }
+               }
                int jawab;
                System.out.println(String.format("Berapakah hasil dari %s - %s ?", fmt.Do(num1), fmt.Do(num2)));
                System.out.print("Jawab : ");
@@ -65,9 +70,17 @@ public class SubGame extends TheGame{
                    System.out.println(String.format("[Wah, salah deh][Skor : %d][Lives : %d][Level : %d]", uscore, ulives, ulevel));
                }
                System.out.println("-----------------------------------------------");
+               if (uscore >= 300){
+                   break;
+               }
             }
-            System.out.println(String.format("[Hai %s, Jangan menyerah ya untuk mencoba lagi.", getName()));
+            if (getLives() == 0){
+                System.out.println(String.format("[Hai %s, Jangan menyerah ya untuk mencoba lagi.", getName()));
+                break;
+            }
         }
-        System.out.println(String.format("[Selamat %s, Anda telah menyelesaikan soal pengurangan dengan baik. Silakan dicoba soal penjumlahan jika belum]", getName()));
+        if (getScore() >= 300){
+            System.out.println(String.format("[Selamat %s, Anda telah menyelesaikan soal pengurangan dengan baik. Silakan dicoba soal penjumlahan jika belum]", getName()));
+        }
     }
 }
