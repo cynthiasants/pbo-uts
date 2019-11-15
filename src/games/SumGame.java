@@ -8,7 +8,7 @@ import utils.*;
 import java.util.Scanner;
 /**
  *
- * @author Cynthia
+ * @author Chandra Hannafi Atsna
  */
 public class SumGame extends TheGame { //inheritance
     public void banner(){ //overriding
