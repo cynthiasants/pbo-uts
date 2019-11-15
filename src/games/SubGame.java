@@ -10,7 +10,7 @@ import utils.*;
 
 /**
  *
- * @author Cynthia
+ * @author Fandi
  */
 public class SubGame extends TheGame{
     public void banner(){ //overriding
