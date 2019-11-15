@@ -63,10 +63,17 @@ public class SumGame extends TheGame { //inheritance
                    System.out.println(String.format("[Wah, salah deh][Skor : %d][Lives : %d][Level : %d]", uscore, ulives, ulevel));
                }
                System.out.println("-----------------------------------------------");
-               
+               if (uscore >= 300){
+                   break;
+               }
             }
-            System.out.println(String.format("[Hai %s, Jangan menyerah ya untuk mencoba lagi.", getName()));
+            if (getLives() == 0){
+                System.out.println(String.format("[Hai %s, Jangan menyerah ya untuk mencoba lagi.", getName()));
+                break;
+            }
         }
-        System.out.println(String.format("[Selamat %s, Anda telah menyelesaikan soal penjumlahan dengan baik. Silakan dicoba soal pengurangan ya]", getName()));
+        if (getScore() >= 300){
+            System.out.println(String.format("[Selamat %s, Anda telah menyelesaikan soal penjumlahan dengan baik. Silakan dicoba soal pengurangan ya]", getName()));
+        }
     }
 }
